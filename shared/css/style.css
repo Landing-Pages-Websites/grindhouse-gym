@@ -1076,3 +1076,50 @@ section {
     transform: rotate(360deg);
   }
 }
+
+/* =================== FLOATING CTA BUTTON =================== */
+.floating-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.75rem;
+  background-color: #C9A227;
+  color: #1a2332;
+  font-family: var(--font-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-normal);
+}
+
+.floating-cta:hover {
+  background-color: #d4ad2e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.floating-cta svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Hide text on mobile, show icon only */
+@media (max-width: 600px) {
+  .floating-cta {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+
+  .floating-cta .cta-text {
+    display: none;
+  }
+}
