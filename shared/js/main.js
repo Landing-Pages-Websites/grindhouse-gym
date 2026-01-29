@@ -13,6 +13,8 @@
     customerId: '00ec32c9-e228-4853-85b5-ac1446a70a41',
     gtmId: 'GTM-M7VVF2K6',
     formEndpoint: 'https://analytics.gomega.ai/submission/submit',
+    siteId: '3697949b-3fce-406c-b00f-75b805a6538',
+    siteKey: 'sk_mkzpdr12_pn46wqfxwaf',
     hubspotPortalId: '', // Add if available
   };
 
@@ -218,7 +220,8 @@
         // Build payload
         const payload = {
           customer_id: CONFIG.customerId,
-          site_id: window.SITE_ID || 'pending',
+          site_id: CONFIG.siteId,
+          site_key: CONFIG.siteKey,
           form_data: {
             first_name: formData.get('first_name'),
             last_name: formData.get('last_name'),
@@ -252,6 +255,7 @@
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'X-Site-Key': CONFIG.siteKey,
           },
           body: JSON.stringify(payload)
         });
