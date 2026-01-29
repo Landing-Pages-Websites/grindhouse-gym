@@ -483,6 +483,111 @@ section {
 }
 
 /* ===================
+   SECTION CTA BANNER
+   =================== */
+.section-cta-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(126, 190, 197, 0.15) 0%, rgba(126, 190, 197, 0.05) 100%);
+  border: 1px solid rgba(126, 190, 197, 0.3);
+  text-align: center;
+}
+
+.cta-banner-content {
+  flex: 1;
+}
+
+.cta-banner-title {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-white);
+}
+
+.cta-banner-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+}
+
+.cta-banner-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.cta-banner-actions .btn {
+  width: 100%;
+}
+
+/* ===================
+   FULL-WIDTH CTA SECTION
+   =================== */
+.full-width-cta {
+  background: linear-gradient(135deg, var(--color-red-orange) 0%, #e04a3e 100%);
+  padding: var(--spacing-xl) 0;
+}
+
+.full-width-cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.full-width-cta-title {
+  font-family: var(--font-primary);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-white);
+}
+
+.full-width-cta-text {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-lg);
+}
+
+.full-width-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width-cta-actions .btn {
+  min-width: 200px;
+}
+
+.full-width-cta-actions .btn-cta {
+  background-color: var(--color-black);
+  border-color: var(--color-black);
+}
+
+.full-width-cta-actions .btn-cta:hover {
+  background-color: var(--color-dark-gray);
+  border-color: var(--color-dark-gray);
+}
+
+.full-width-cta-actions .btn-secondary {
+  border-color: var(--color-white);
+}
+
+.full-width-cta-actions .btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-red-orange);
+}
+
+/* ===================
    TESTIMONIALS SECTION
    =================== */
 #testimonials {
@@ -857,6 +962,28 @@ section {
 
   .phone-cta-bar {
     display: none;
+  }
+
+  /* CTA Banner - Tablet */
+  .section-cta-banner {
+    flex-direction: row;
+    text-align: left;
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+
+  .cta-banner-actions {
+    flex-direction: row;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .cta-banner-actions .btn {
+    width: auto;
+  }
+
+  /* Full-width CTA - Tablet */
+  .full-width-cta-actions {
+    flex-direction: row;
   }
 }
 
