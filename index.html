@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grind House | Choose Your Location</title>
+  <meta name="description" content="Grind House - Premium gyms in Brooklyn and Manhattan. No fads. No gimmicks. Just honest, hard work.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="shared/images/favicon.svg">
+  <link rel="icon" type="image/png" href="shared/images/favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      color: #888;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+      color: #ccc;
+    }
+
+    .locations {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .location-card {
+      display: block;
+      background: #151515;
+      border: 1px solid #333;
+      padding: 3rem 4rem;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .location-card:hover {
+      background: #1a1a1a;
+      border-color: #fff;
+      transform: translateY(-4px);
+    }
+
+    .location-card h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .location-card p {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .locations {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .location-card {
+        padding: 2rem;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">Grind House</div>
+  <div class="tagline">Rise. Grind. Repeat.</div>
+
+  <h1>Choose Your Location</h1>
+
+  <div class="locations">
+    <a href="brooklyn/" class="location-card">
+      <h2>Brooklyn</h2>
+      <p>Williamsburg</p>
+    </a>
+    <a href="manhattan/" class="location-card">
+      <h2>Manhattan</h2>
+      <p>Coming Soon</p>
+    </a>
+  </div>
+</body>
+</html>
