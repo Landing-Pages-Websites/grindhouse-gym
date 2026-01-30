@@ -13,9 +13,10 @@
     customerId: '00ec32c9-e228-4853-85b5-ac1446a70a41',
     gtmId: 'GTM-M7VVF2K6',
     formEndpoint: 'https://analytics.gomega.ai/submission/submit',
-    siteId: '3697949b-3fce-406c-b00f-75b805a6538',
+    siteId: '3697949b-3fce-406c-b00f-75b805a6538c',
     siteKey: 'sk_mkzpdr12_pn46wqfxwaf',
     hubspotPortalId: '', // Add if available
+    fbPixelId: '1926576494597354',
   };
 
   // =====================
@@ -255,7 +256,6 @@
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'X-Site-Key': CONFIG.siteKey,
           },
           body: JSON.stringify(payload)
         });
@@ -278,6 +278,14 @@
           form_location: window.LOCATION_NAME,
           lead_type: formData.get('reason')
         });
+
+        // Track Facebook Pixel Lead event
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', {
+            content_name: 'Schedule Tour Form',
+            content_category: window.LOCATION_NAME
+          });
+        }
 
         // Show success state
         showFormSuccess();
@@ -399,9 +407,31 @@
   }
 
   // =====================
+  // FACEBOOK PIXEL
+  // =====================
+  function initFacebookPixel() {
+    if (!CONFIG.fbPixelId) return;
+
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', CONFIG.fbPixelId);
+    fbq('track', 'PageView');
+  }
+
+  // =====================
   // INITIALIZATION
   // =====================
   function init() {
+    // Initialize Facebook Pixel first
+    initFacebookPixel();
+
     // Store attribution data on page load
     storeAttributionData();
 
