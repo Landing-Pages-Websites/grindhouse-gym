@@ -1,6 +1,6 @@
 /* Grind House Landing Page Styles
    Mobile-First Design | Brand: Grind House NYC
-   Primary: #000000 | Accent: #7EBEC5 (Teal) | Energy: #fc5549 (Red-Orange)
+   Primary: #000000 | Accent: #DDDDDD (Stone) | Energy: #fc5549 (Red-Orange)
 */
 
 /* CSS Reset & Base */
@@ -15,7 +15,7 @@
   --color-black: #000000;
   --color-white: #FFFFFF;
   --color-dark-gray: #231f20;
-  --color-teal: #7EBEC5;
+  --color-stone: #DDDDDD;
   --color-red-orange: #fc5549;
   --color-light-gray: #f5f5f5;
   --color-medium-gray: #333333;
@@ -147,7 +147,7 @@ p {
 }
 
 .nav-phone:hover {
-  color: var(--color-teal);
+  color: var(--color-stone);
 }
 
 .nav-phone svg {
@@ -176,9 +176,9 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--color-teal);
+  background-color: var(--color-stone);
   color: var(--color-black);
-  border-color: var(--color-teal);
+  border-color: var(--color-stone);
 }
 
 .btn-primary:hover {
@@ -268,7 +268,7 @@ p {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--color-teal);
+  color: var(--color-stone);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -310,7 +310,7 @@ p {
 .trust-item svg {
   width: 20px;
   height: 20px;
-  fill: var(--color-teal);
+  fill: var(--color-stone);
 }
 
 /* ===================
@@ -333,7 +333,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--color-teal);
+  color: var(--color-stone);
   margin-bottom: var(--spacing-xs);
 }
 
@@ -358,7 +358,7 @@ section {
 
 /* Accent background sections */
 .section-accent {
-  background-color: var(--color-teal);
+  background-color: var(--color-stone);
   color: var(--color-black);
 }
 
@@ -398,7 +398,7 @@ section {
   width: 50px;
   height: 50px;
   margin-bottom: var(--spacing-sm);
-  fill: var(--color-teal);
+  fill: var(--color-stone);
 }
 
 .service-title {
@@ -420,7 +420,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-teal);
+  color: var(--color-stone);
   transition: color var(--transition-fast);
 }
 
@@ -452,14 +452,14 @@ section {
   gap: var(--spacing-md);
   padding: var(--spacing-md);
   background-color: rgba(255, 255, 255, 0.05);
-  border-left: 3px solid var(--color-teal);
+  border-left: 3px solid var(--color-stone);
 }
 
 .expertise-number {
   font-family: var(--font-primary);
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--color-teal);
+  color: var(--color-stone);
   line-height: 1;
 }
 
@@ -492,8 +492,8 @@ section {
   gap: var(--spacing-md);
   margin-top: var(--spacing-xl);
   padding: var(--spacing-lg);
-  background: linear-gradient(135deg, rgba(126, 190, 197, 0.15) 0%, rgba(126, 190, 197, 0.05) 100%);
-  border: 1px solid rgba(126, 190, 197, 0.3);
+  background: linear-gradient(135deg, rgba(221, 221, 221, 0.15) 0%, rgba(221, 221, 221, 0.05) 100%);
+  border: 1px solid rgba(221, 221, 221, 0.3);
   text-align: center;
 }
 
@@ -613,7 +613,7 @@ section {
 }
 
 .testimonials-wrapper::-webkit-scrollbar-thumb {
-  background: var(--color-teal);
+  background: var(--color-stone);
 }
 
 .testimonial-card {
@@ -653,7 +653,7 @@ section {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--color-teal);
+  background-color: var(--color-stone);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -701,7 +701,7 @@ section {
 .location-icon {
   width: 24px;
   height: 24px;
-  fill: var(--color-teal);
+  fill: var(--color-stone);
   flex-shrink: 0;
 }
 
@@ -710,7 +710,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.85rem;
-  color: var(--color-teal);
+  color: var(--color-stone);
   margin-bottom: 0.25rem;
 }
 
@@ -719,7 +719,7 @@ section {
 }
 
 .location-value a:hover {
-  color: var(--color-teal);
+  color: var(--color-stone);
 }
 
 .location-hours {
@@ -762,7 +762,7 @@ section {
    CONTACT SECTION
    =================== */
 #contact {
-  background: linear-gradient(135deg, var(--color-teal) 0%, #5ea8b0 100%);
+  background: linear-gradient(135deg, var(--color-stone) 0%, #bbbbbb 100%);
   color: var(--color-black);
 }
 
@@ -816,7 +816,7 @@ section {
 .form-input:focus,
 .form-select:focus {
   outline: none;
-  border-color: var(--color-teal);
+  border-color: var(--color-stone);
 }
 
 .form-input::placeholder {
@@ -874,7 +874,7 @@ section {
   width: 60px;
   height: 60px;
   margin: 0 auto var(--spacing-md);
-  fill: var(--color-teal);
+  fill: var(--color-stone);
 }
 
 .form-success-title {
@@ -1028,8 +1028,8 @@ section {
   text-align: center;
 }
 
-.text-teal {
-  color: var(--color-teal);
+.text-stone {
+  color: var(--color-stone);
 }
 
 .hidden {
@@ -1087,7 +1087,7 @@ section {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 1.75rem;
-  background-color: var(--color-teal);
+  background-color: var(--color-stone);
   color: var(--color-black);
   font-family: var(--font-primary);
   font-size: 1.125rem;
