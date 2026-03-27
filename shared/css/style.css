@@ -483,6 +483,91 @@ section {
 }
 
 /* ===================
+   PROMO BANNER
+   =================== */
+.promo-banner {
+  background: linear-gradient(135deg, var(--color-red-orange) 0%, #e04a3e 100%);
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 20px,
+    rgba(255, 255, 255, 0.03) 20px,
+    rgba(255, 255, 255, 0.03) 40px
+  );
+  pointer-events: none;
+}
+
+.promo-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.promo-badge {
+  display: inline-block;
+  background: var(--color-white);
+  color: var(--color-red-orange);
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.3rem 1rem;
+  border-radius: 2px;
+}
+
+.promo-title {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  line-height: 1.1;
+}
+
+.promo-text {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 500px;
+}
+
+.promo-text strong {
+  color: var(--color-white);
+}
+
+.promo-banner .btn-cta {
+  margin-top: var(--spacing-xs);
+  background: var(--color-white);
+  color: var(--color-red-orange);
+  border-color: var(--color-white);
+  font-weight: 700;
+}
+
+.promo-banner .btn-cta:hover {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+/* ===================
    SECTION CTA BANNER
    =================== */
 .section-cta-banner {
@@ -964,6 +1049,15 @@ section {
     display: none;
   }
 
+  /* Promo Banner - Tablet */
+  .promo-title {
+    font-size: 2.5rem;
+  }
+
+  .promo-text {
+    font-size: 1.2rem;
+  }
+
   /* CTA Banner - Tablet */
   .section-cta-banner {
     flex-direction: row;
@@ -1011,6 +1105,15 @@ section {
 
   .contact-form {
     padding: var(--spacing-xl);
+  }
+
+  /* Promo Banner - Desktop */
+  .promo-banner {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .promo-title {
+    font-size: 3rem;
   }
 }
 
