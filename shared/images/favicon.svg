@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#000000"/>
+  <!-- G -->
+  <path d="M3 7h10v3H6v3h5v3H6v4h7v3H3V7z" fill="#FAFAFA"/>
+  <!-- H -->
+  <path d="M15 7h3v6h4V7h3v16h-3v-7h-4v7h-3V7z" fill="#FAFAFA"/>
+  <!-- Accent bar -->
+  <rect x="3" y="26" width="22" height="2" fill="#fc5549"/>
+</svg>
