@@ -271,6 +271,14 @@
           reason: formData.get('reason')
         });
 
+        // PostHog: primary lead conversion event
+        if (window.posthog) {
+          window.posthog.capture('trial_form_submitted', {
+            location: window.LOCATION_NAME,
+            inquiry_reason: formData.get('reason')
+          });
+        }
+
         // Push to dataLayer for conversion tracking
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
@@ -304,6 +312,12 @@
         }, 3000);
 
         trackEvent('form_error', { error: error.message });
+
+        // PostHog: form error tracking
+        if (window.posthog) {
+          window.posthog.captureException(error, { location: window.LOCATION_NAME });
+          window.posthog.capture('form_error', { location: window.LOCATION_NAME });
+        }
       }
     });
   }
@@ -359,6 +373,11 @@
           phone_number: phoneNumber,
           location: window.LOCATION_NAME
         });
+
+        // PostHog: phone call lead
+        if (window.posthog) {
+          window.posthog.capture('phone_click', { location: window.LOCATION_NAME });
+        }
       });
     });
   }
@@ -377,6 +396,15 @@
           cta_destination: ctaHref,
           location: window.LOCATION_NAME
         });
+
+        // PostHog: CTA click
+        if (window.posthog) {
+          window.posthog.capture('cta_click', {
+            cta_text: ctaText,
+            cta_destination: ctaHref,
+            location: window.LOCATION_NAME
+          });
+        }
       });
     });
   }
@@ -401,6 +429,19 @@
         if (percent >= milestone && !tracked.has(milestone)) {
           tracked.add(milestone);
           trackEvent('scroll_depth', { depth: milestone });
+        }
+      });
+    });
+  }
+
+  // =====================
+  // DIRECTIONS TRACKING
+  // =====================
+  function initDirectionsTracking() {
+    document.querySelectorAll('a[href*="maps.google.com"]').forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.posthog) {
+          window.posthog.capture('directions_clicked', { location: window.LOCATION_NAME });
         }
       });
     });
@@ -443,6 +484,7 @@
     initPhoneTracking();
     initCtaTracking();
     initScrollTracking();
+    initDirectionsTracking();
 
     // Track page view
     trackEvent('page_view', {
